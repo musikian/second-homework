@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int sumOfDigits(int n) {
-    if (n == 0) return 0;
-    return (n % 10) + sumOfDigits(n / 10);
+string reverse(string s) {
+    if (s.empty()) return s;
+    return s.back() + reverse(s.substr(0, s.size() - 1));
 }
 
 int main() {
-    cout << sumOfDigits(1234) << endl;  
+    cout << reverse("hello") << endl;  
     return 0;
 }
